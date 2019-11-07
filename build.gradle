@@ -15,14 +15,15 @@ apply plugin: 'idea'
 group 'com.github.protobuf'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    //provide protobuf java api and classes needed
     compile 'com.google.protobuf:protobuf-java:3.9.2'
+    // provide util method which can be used to convert protobuf builder to json and vice-versa
+    compile 'com.google.protobuf:protobuf-java-util:3.9.2'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 protobuf {

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package test.simple.complex;
+//It is complex message as we are containing message inside as message.
+message ComplexMessage {
+  DummyMessage dummy = 1;
+  // list of messages
+  repeated DummyMessage dummies =2;
+}
+
+message DummyMessage {
+  string name = 1;
+  int32 id = 2;
+}

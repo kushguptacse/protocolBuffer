@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package simple.test;
+option java_package = "com.simple.test";
+option java_outer_classname = "RepeatedSampleMessageProto";
+
+message RepeatedSampleMessage {
+  string text = 1;
+  repeated string items = 2;
+}

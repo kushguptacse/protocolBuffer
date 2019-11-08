@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_outer_classname = "AdvancedTypeExampleProto";
+option java_package = "com.advanced.example";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+message AdvancedType {
+  int32 id = 1;
+  map<string, Demo> demos = 4;
+  google.protobuf.Timestamp current_time = 5;
+  google.protobuf.Duration delay = 6;
+  oneof OneOfExample {
+    string name = 2;
+    int32 count = 3;
+  }
+}
+
+message Demo {
+  string dummy = 7;
+}
